@@ -107,4 +107,16 @@
       </plugin>
     </plugins>
   </build>
+    <distributionManagement>
+    <repository>
+        <id>jfrog</id>
+        <name>ip-172-31-84-85-releases</name>
+        <url>http://ec2-44-204-177-126.compute-1.amazonaws.com:8081/artifactory/local-repo</url>
+    </repository>
+    <snapshotRepository>
+        <id>jfrog</id>
+        <name>ip-172-31-84-85-snapshots</name>
+        <url>http://ec2-44-204-177-126.compute-1.amazonaws.com:8081/artifactory/local-repo</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
