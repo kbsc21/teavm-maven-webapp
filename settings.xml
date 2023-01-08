@@ -139,7 +139,7 @@ under the License.
 	
 	<server>
       <id>jfrog</id>
-      <username>admin</username>
+      <username>jenkins</username>
       <password>Password@123</password>
     </server>
    
