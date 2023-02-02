@@ -27,9 +27,10 @@ stages {
     sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/teavm-maven-webapp/target/teavm-maven-webapp-1.0-RELEASE.war ubuntu@172.31.7.90:/opt/apache-tomcat-9.0.71/webapps'
 }
     }
-   stage('Notification')
+   stage('Notification') {
    steps{
     slackSend channel: 'devopsdeepdive_batch13', message: 'build is successful'
+   }
    }
   }
 }
