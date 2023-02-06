@@ -1,7 +1,7 @@
 pipeline {
 agent any
 stages {
-  stage('Checkout') {
+  stage('Checkout_latest') {
     steps {
       checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-user', url: 'https://github.com/devopsdeepdive/teavm-maven-webapp.git']])
     }
