@@ -11,7 +11,7 @@ agent any
   }
      stage('Build') {
        when {
-  branch 'master'
+  branch 'PR1'
 }
     steps {
       sh 'mvn compile'
