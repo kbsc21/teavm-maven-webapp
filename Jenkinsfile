@@ -18,6 +18,9 @@ agent any
     }
   }
      stage('Test') {
+          when {
+  branch 'PR1'
+}
     steps {
       sh 'mvn test'
     }
