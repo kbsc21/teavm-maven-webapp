@@ -19,9 +19,11 @@ agent any
       sh 'mvn test'
     }
   }
-      stage('Package') {
+      stage('Deploy') {
     steps {
-      sh 'mvn package'
+      sshagent(['tomcat_deploy']) {
+    sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/teavm-maven-webapp-pipeline/target/teavm-maven-webapp-1.0-SNAPSHOT.war /opt/tomcat/webapps'
+}
     }
   }
 
