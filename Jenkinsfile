@@ -22,7 +22,7 @@ agent any
       stage('Deploy') {
     steps {
       sshagent(['tomcat_deploy']) {
-    sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/teavm-maven-webapp-pipeline/target/teavm-maven-webapp-1.0-SNAPSHOT.war /opt/tomcat/webapps'
+    sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/teavm-maven-webapp-pipeline/target/teavm-maven-webapp-1.0-SNAPSHOT.war ubuntu@172.31.9.172:/opt/tomcat/webapps'
 }
     }
   }
