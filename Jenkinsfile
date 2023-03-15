@@ -10,6 +10,9 @@ agent any
     }
   }
      stage('Build') {
+       when {
+  branch 'master'
+}
     steps {
       sh 'mvn compile'
     }
