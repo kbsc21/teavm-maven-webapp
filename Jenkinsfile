@@ -9,18 +9,13 @@ agent any
       checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github_cred', url: 'https://github.com/devopsdeepdive/teavm-maven-webapp.git']])
     }
   }
+    sleep time: 1, unit: 'MINUTES'
      stage('Build') {
-       when {
-  branch 'PR1'
-}
     steps {
       sh 'mvn compile'
     }
   }
      stage('Test') {
-          when {
-  branch 'PR1'
-}
     steps {
       sh 'mvn test'
     }
