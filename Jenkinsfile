@@ -34,8 +34,7 @@ agent any
   } */
      stage('Notify') {
       steps {
-          slackSend channel: '#devopsdeepdive_batch14', message: 'message: "Build Started: ${env.JOB_NAME}'
-      }
+slackSend channel: '#devopsdeepdive_batch14', color: '#439FE0', message: 'message: "Build Started'      }
   }
 
 }
